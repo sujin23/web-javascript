@@ -1,0 +1,36 @@
+<ul id="target">
+    <li>HTML</li>
+    <li>CSS</li>
+</ul>
+<input type="button" onclick="callAppendChild();" value="appendChild()" />
+<input type="button" onclick="callInsertBefore();" value="insertBefore()" />
+<script>
+    function callAppendChild(){
+        var target = document.getElementById('target');
+        var li = document.createElement('li');
+        var text = document.createTextNode('JavaScript');
+        li.appendChild(text);
+        target.appendChild(li);
+    }
+ 
+    function callInsertBefore(){
+        var target = document.getElementById('target');
+        var li = document.createElement('li');
+        var text = document.createTextNode('jQuery');
+        li.appendChild(text);
+        target.insertBefore(li, target.firstChild);
+    }
+</script>
+
+<!-- 노드의 추가와 관련된 API들은 아래와 같다.
+
+appendChild(child)
+노드의 마지막 자식으로 주어진 엘리먼트 추가
+insertBefore(newElement, referenceElement)
+appendChild와 동작방법은 같으나 두번째 인자로 엘리먼트를 전달 했을 때 이것 앞에 엘리먼트가 추가된다.
+노드를 추가하기 위해서는 추가할 엘리먼트를 생성해야 하는데 이것은 document 객체의 기능이다. 아래 API는 노드를 생성하는 API이다.
+
+document.createElement(tagname)
+엘리먼트 노드를 추가한다.
+document.createTextNode(data)
+텍스트 노드를 추가한다.  -->
