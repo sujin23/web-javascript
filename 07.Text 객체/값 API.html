@@ -1,0 +1,12 @@
+<!-- 텍스트 노드는 DOM에서 실질적인 데이터가 저장되는 객체이다. -->
+
+<ul>
+    <li id="target">html</li> 
+    <li>css</li>
+    <li>JavaScript</li>
+</ul>
+<script>
+    var t = document.getElementById('target').firstChild;
+    console.log(t.nodeValue);
+    console.log(t.data);
+</script>
