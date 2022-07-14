@@ -1,0 +1,13 @@
+<!-- selector 파라미터는 이벤트 대상을 필터링한다. 아래 예제를 보자. -->
+
+<ul>
+    <li><a href="#">HTML</a></li>
+    <li><a href="#">CSS</a></li>
+    <li><a href="#">JavaScript</a></li>
+</ul>
+<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script>
+    $('ul').on('click','a, li', function(event){
+        console.log(this.tagName);
+    })
+</script>
