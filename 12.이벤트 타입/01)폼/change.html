@@ -1,0 +1,12 @@
+<!-- change는 폼 컨트롤의 값이 변경 되었을 때 발생하는 이벤트다.
+
+input(text,radio,checkbox), textarea, select 태그에 적용된다. -->
+
+<p id="result"></p>
+<input id="target" type="name" />
+<script>
+var t = document.getElementById('target');
+t.addEventListener('change', function(event){
+    document.getElementById('result').innerHTML=event.target.value;
+});
+</script>

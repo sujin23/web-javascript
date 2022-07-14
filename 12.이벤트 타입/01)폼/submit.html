@@ -1,0 +1,19 @@
+<!-- submit은 폼의 정보를 서버로 전송하는 명령인 submit시에 일어난다.
+
+form 태그에 적용된다.
+
+아래 예제는 전송 전에 텍스트 필드에 값이 입력 되었는지를 확인한다. 만약 값이 입력되지 않았다면 전송을 중단한다. -->
+
+<form id="target" action="result.html">
+    <label for="name">name</label> <input id="name" type="name" />
+    <input type="submit" />
+</form>
+<script>
+var t = document.getElementById('target');
+t.addEventListener('submit', function(event){
+    if(document.getElementById('name').value.length === 0){
+        alert('Name 필드의 값이 누락 되었습니다');
+        event.preventDefault();
+    }
+});
+</script>
